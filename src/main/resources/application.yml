@@ -1,0 +1,47 @@
+server:
+  port: 8090
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB # 设置单个文件最大大小为10MB
+      max-request-size: 100MB  	# 设置多个文件大小为100MB
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/pethis?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 2270398619
+##mybatis-plus
+mybatis-plus:
+  type-aliases-package: com.example.pethis.entity # ?????
+  ##??mybatisplus??sql??
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  #配置mybatisp xml文件位置
+  mapper-locations:
+    - classpath:mapper/*.xml
+logging:
+  level:
+    com.yl: debug
+knife4j:
+  enable: true
+  openapi:
+    title: Knife4j官方文档
+    description: "`我是测试`,**你知道吗**
+    # aaa"
+    email: xiaoymin@foxmail.com
+    concat: pethis
+    url: https://docs.xiaominfo.com
+    version: v4.0
+    license: Apache 2.0
+    license-url: https://stackoverflow.com/
+    terms-of-service-url: https://stackoverflow.com/
+    group:
+      test1:
+        group-name: 分组名称
+        api-rule: package
+        api-rule-resources:
+          - com.example.pethis.controller
+yy:
+  uploadurl: http://localhost:8085/img/
+  localurl: G:/a_vue/nginx-1.23.4/html/img/
