@@ -5,7 +5,7 @@ import cn.hutool.core.util.IdUtil;
 import cn.hutool.json.JSONUtil;
 
 
-import com.example.pethis.entity.EditImg;
+
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -46,24 +46,7 @@ public class upload {
      * @param file
      * @return
      */
-    @PostMapping("edit/upload")
-    public String uploadfile(@RequestParam("file") MultipartFile file){
 
-
-        Map<String,Object> map = new LinkedHashMap<>();
-        System.out.println(file);
-        map.put("errno",0);
-
-        String url = getUrl(file);
-
-        EditImg img = new EditImg();
-        img.setUrl(url);
-        img.setHref(url);
-
-        map.put("data",img);
-        System.out.println(JSONUtil.toJsonStr(map));
-        return JSONUtil.toJsonStr(map);
-    }
 
     @PostMapping("/img")
     public String getFileUrl(HttpServletRequest request ,@RequestParam(value = "file")MultipartFile file){

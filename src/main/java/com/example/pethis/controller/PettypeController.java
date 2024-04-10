@@ -23,4 +23,14 @@ public class PettypeController {
     public Result reg(@RequestBody Pettype pettype){
         return Result.ok(pettypeService.saveOrUpdate(pettype));
     }
+
+    @GetMapping("/list/{curr}")
+    public Result toPage(@PathVariable("curr") Integer curr){
+        return Result.ok(pettypeService.listByPage(curr));
+    }
+
+    @PostMapping("/remove")
+    public Result removePettype(@RequestParam("id")Integer id){
+        return Result.ok(pettypeService.removeById(id));
+    }
 }

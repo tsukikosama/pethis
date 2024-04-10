@@ -40,4 +40,6 @@ public class IllpetController {
 
         return Result.ok(illpetService.removeById(id));
     }
+
+
 }

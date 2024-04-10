@@ -31,7 +31,7 @@ public class Newtype implements Serializable {
     * 
     */
 
-    private Integer type;
+
 
 
 
