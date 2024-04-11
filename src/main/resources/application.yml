@@ -10,7 +10,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/pethis?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
     username: root
-    password: 2270398619
+    password: wang657483
 ##mybatis-plus
 mybatis-plus:
   type-aliases-package: com.example.pethis.entity # ?????

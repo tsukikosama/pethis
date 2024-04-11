@@ -20,8 +20,8 @@ public class DoctorController {
     @GetMapping("/all")
     public Result getDoctor(){
         List<Doctor> list = doctorService.list();
+        //
         for(Doctor item : list){
-
             item.setTitles(CollectionUtil.toList(item.getTitle().split(",")));
         }
         return Result.ok(list);

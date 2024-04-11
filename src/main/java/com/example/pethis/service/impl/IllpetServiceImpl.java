@@ -30,4 +30,12 @@ public class IllpetServiceImpl extends ServiceImpl<IllpetMapper, Illpet>
         return page;
 
     }
+
+    @Override
+    public List<Illpet> search(String key) {
+        List<Illpet> list = this.baseMapper.listByPhone(key);
+        return list;
+    }
+
+
 }

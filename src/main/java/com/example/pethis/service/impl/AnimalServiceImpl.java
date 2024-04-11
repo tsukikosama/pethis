@@ -23,4 +23,10 @@ public class AnimalServiceImpl extends ServiceImpl<AnimalMapper, Animal>
         page.setTotal(this.count());
         return page;
     }
+
+    @Override
+    public List<Animal> search(String key) {
+        List<Animal> list = this.baseMapper.search(key);
+        return list;
+    }
 }

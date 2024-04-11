@@ -41,5 +41,10 @@ public class IllpetController {
         return Result.ok(illpetService.removeById(id));
     }
 
+    @ApiOperation("通过手机号查询治疗宠物")
+    @GetMapping("/search")
+    public Result search(@RequestParam("key")String key){
+        return Result.ok(illpetService.search(key));
+    }
 
 }

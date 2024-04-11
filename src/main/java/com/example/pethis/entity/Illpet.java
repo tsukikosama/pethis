@@ -17,4 +17,5 @@ public class Illpet {
     private String phone;
     private Integer state;
     private String illname;
+    private String illdesc;
 }

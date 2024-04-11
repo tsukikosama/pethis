@@ -11,4 +11,7 @@ import java.util.List;
 public interface AnimalMapper extends BaseMapper<Animal> {
     @Select("select * from animal limit ${(curr-1)*10},10")
     List<Animal> listByPage(Integer curr);
+
+    @Select("select * from animal where phone = ${key}")
+    List<Animal> search(String key);
 }

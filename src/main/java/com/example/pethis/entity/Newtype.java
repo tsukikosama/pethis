@@ -15,7 +15,7 @@ import java.io.Serializable;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Newtype implements Serializable {
+public class Newtype  {
 
     /**
     * 
